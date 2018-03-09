@@ -17,7 +17,18 @@ if (Meteor.isClient) {
   };
 } else {
   Accounts.addAutopublishFields({
-    forLoggedInUser: ['services.deezer'],
-    forOtherUsers: ['services.deezer.username']
+    forLoggedInUser: _.map(
+      // publish access token since it can be used from the client
+      Deezer.whitelistedFields.concat(['accessToken', 'expiresAt']),
+      function (subfield) {
+        return 'services.deezer.' + subfield;
+      }),
+
+    forOtherUsers: _.map(
+      // even with autopublish, no legitimate web app should be publishing all users' emails
+      _.without(Deezer.whitelistedFields, 'email', 'id', 'name', 'firstname', 'lastname'),
+      function (subfield) {
+        return 'services.deezer.' + subfield;
+      })
   });
 }
