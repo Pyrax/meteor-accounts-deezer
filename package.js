@@ -1,6 +1,6 @@
 Package.describe({
   name: 'pyrax:meteor-accounts-deezer',
-  version: '0.0.1',
+  version: '1.0.0',
   summary: '',
   git: 'https://github.com/pyrax/meteor-accounts-deezer.git'
 });
