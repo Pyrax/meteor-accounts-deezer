@@ -37,7 +37,7 @@ oauth@1.2.1
 oauth2@1.2.0
 ordered-dict@1.1.0
 promise@0.10.2
-pyrax:meteor-accounts-deezer@1.0.0
+pyrax:meteor-accounts-deezer@1.0.1
 pyrax:meteor-deezer-oauth@1.0.0
 random@1.1.0
 rate-limit@1.0.9
