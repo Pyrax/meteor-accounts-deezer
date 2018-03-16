@@ -1,4 +1,5 @@
 # meteor-accounts-deezer
+Meteor login service and accounts for Deezer
 
 ## Usage
 - Add the package to your Meteor application: `meteor add pyrax:meteor-accounts-deezer`
